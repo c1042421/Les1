@@ -18,11 +18,19 @@ namespace oefDobbelstenen
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class FrmDobbelsteen : Window
     {
-        public MainWindow()
+        public FrmDobbelsteen()
         {
             InitializeComponent();
+        }
+
+        private void btnGooien_Click(object sender, RoutedEventArgs e)
+        {
+            Random random = new Random();
+
+            lblGetal1.Content = random.Next();
+            lblGetal2.Content = random.Next();
         }
     }
 }
