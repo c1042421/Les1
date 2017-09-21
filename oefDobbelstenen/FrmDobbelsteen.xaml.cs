@@ -20,17 +20,30 @@ namespace oefDobbelstenen
     /// </summary>
     public partial class FrmDobbelsteen : Window
     {
+        Random random;
+        Dobbelsteen steen1;
+        Dobbelsteen steen2;
+
         public FrmDobbelsteen()
         {
             InitializeComponent();
         }
 
+        public void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            random = new Random();
+
+            steen1 = new Dobbelsteen(random);
+            steen2 = new Dobbelsteen(4, random);
+        }
+
         private void btnGooien_Click(object sender, RoutedEventArgs e)
         {
-            Random random = new Random();
+            steen1.Roll();
+            steen2.Roll();
 
-            lblGetal1.Content = random.Next();
-            lblGetal2.Content = random.Next();
+            lblGetal1.Content = steen1.Waarde;
+            lblGetal2.Content = steen2.Waarde;
         }
     }
 }
