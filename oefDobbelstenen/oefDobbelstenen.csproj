@@ -62,6 +62,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Dobbelsteen.cs" />
     <Compile Include="FrmDobbelsteen.xaml.cs">
       <DependentUpon>FrmDobbelsteen.xaml</DependentUpon>
       <SubType>Code</SubType>
